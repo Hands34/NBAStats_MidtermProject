@@ -1,0 +1,33 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  full_name: MyString
+  games_played: 
+  minutes: 
+  points: 
+  rebounds: 
+  assists: 
+  steals: 
+  blocks: 
+  turnovers: 
+  age: 
+  birth_place: 
+  position: 
+  college: one
+  team: one
+
+two:
+  full_name: MyString
+  games_played: 
+  minutes: 
+  points: 
+  rebounds: 
+  assists: 
+  steals: 
+  blocks: 
+  turnovers: 
+  age: 
+  birth_place: 
+  position: 
+  college: two
+  team: two
