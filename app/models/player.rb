@@ -3,5 +3,5 @@ class Player < ApplicationRecord
   belongs_to :team
 
   validates :full_name, :games_played, :minutes, :points, :rebounds,
-            :assists, :steals, :blocks, :turnovers, :age, :birth_place, :position, presence: true
+            :assists, :steals, :blocks, :turnovers, presence: true
 end
