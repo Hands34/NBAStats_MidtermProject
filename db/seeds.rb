@@ -8,7 +8,8 @@
 require "csv" # Import the CSV library that comes with ruby
 
 # Remove all data to start.
-
+PlayerPosition.delete_all
+Position.delete_all
 Player.delete_all
 Team.delete_all
 College.delete_all
@@ -43,16 +44,32 @@ players.each do |p|
       college:      college
     )
 
-    puts "Invalid player #{p['Name']}" unless player.valid?
+    unless player.valid?
+      puts "Invalid player #{p['Name']}"
+      next
+    end
     # puts player.errors.messages
+    positions = p["Pos"].split(",")
+    positions.each do |position|
+      pos = Position.find_or_create_by(name: position)
+
+      unless pos.valid?
+        puts "Invalid Position: #{position} for player: #{player.name}"
+        next
+      end
+      PlayerPosition.create(player: player, position: pos)
+    end
+
   else
     puts "Invalid team #{p['Team']}for player #{p['Name']}."
-    puts team.errors.messages
+    # puts team.errors.messages
     puts "Invalid College #{p['College']} for player #{p['Name']}."
-    puts college.errors.messages
+    # puts college.errors.messages
   end
 end
 
 puts "Created #{Team.count} Teams"
 puts "Created #{College.count} Colleges"
 puts "Created #{Player.count} Players"
+puts "Created #{Position.count} Positions"
+puts "Created #{PlayerPosition.count} Player Positions"
