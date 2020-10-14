@@ -5,4 +5,6 @@ class Player < ApplicationRecord
 
   validates :full_name, :games_played, :minutes, :points, :rebounds,
             :assists, :steals, :blocks, :turnovers, presence: true
+
+  validates :points, :rebounds, :assists, :steals, :blocks, :turnovers, numericality: { only_integer: true }
 end
