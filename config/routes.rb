@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'home/index'
   resources :players, only: %i[index show]
   resources :teams, only: %i[index show]
 
