@@ -1,2 +1,7 @@
-<h1>Players#index</h1>
-<p>Find me in app/views/players/index.html.erb</p>
+<h2 class="title is-2">Top 50 Players</h2>
+
+<ol class="ml-5">
+  <% @players[0..49].each do |player|%>
+    <li><%= link_to player.full_name, player %> plays for <%= player.team.name %></li>
+  <% end %>
+</ol>
