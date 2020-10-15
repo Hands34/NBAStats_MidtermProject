@@ -4,6 +4,7 @@ class HomeController < ApplicationController
                      .order("points DESC")
                      .limit(10)
 
-    @teams = Team.limit(10)
+    @teams = Team.ordered_by_players
+                 .limit(10)
   end
 end

@@ -17,6 +17,18 @@
     </p>
   </div>
 
+  <div class="column">
+    <h2 class = "title is-4">Top 10 Teams</h2>
+    <ol class="ml-5">
+      <% @teams.each do |team| %>
+        <li>
+          <%= link_to team.name, team %>
+          <em>(<%= pluralize team.player_count, "Player" %>)</em>
+        </li>
+      <% end %>
+    </ol>
+  </div>
+
 
 
 </div>
