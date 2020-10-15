@@ -2,6 +2,9 @@
 
 <ol class="ml-5">
   <% @teams.each do |team| %>
-    <li><%= link_to team.name, team %></li>
+    <li>
+      <%= link_to team.name, team %>
+      <em>(<%= pluralize team.player_count, "Player" %>)</em>
+    </li>
   <% end %>
 </ol>
