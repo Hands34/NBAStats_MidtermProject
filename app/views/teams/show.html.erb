@@ -1,1 +1,11 @@
 <h2 class="title is-2"> <%= @team.name %></h2>
+
+<p>
+  This team has <%= @team.players.count %> players on it.
+</p>
+
+<ul>
+  <% @team.players.each do |player| %>
+    <li><%= link_to player.full_name, player %></li>
+  <% end %>
+</ul>

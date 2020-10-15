@@ -1,1 +1,60 @@
 <h2 class="title is-2"><%= @player.full_name %></h2>
+
+<p><strong>Team: </strong>
+  <%= link_to @player.team.name, @player.team %>
+</p>
+
+<p>
+  <strong>Games Played: </strong>
+  <%= @player.games_played %>
+</p>
+
+<p>
+  <strong>Minutes: </strong>
+  <%= @player.minutes %>
+</p>
+
+<p>
+  <strong>Points: </strong>
+  <%= @player.points %>
+</p>
+
+<p>
+  <strong>Rebounds: </strong>
+  <%= @player.rebounds %>
+</p>
+
+<p>
+  <strong>Assists: </strong>
+  <%= @player.assists %>
+</p>
+
+<p>
+  <strong>Steals: </strong>
+  <%= @player.steals %>
+</p>
+
+<p>
+  <strong>Blocks: </strong>
+  <%= @player.blocks %>
+</p>
+
+<p>
+  <strong>Turnovers: </strong>
+  <%= @player.turnovers %>
+</p>
+
+<p>
+  <strong>Age: </strong>
+  <%= @player.age %>
+</p>
+
+<p>
+  <strong>Birth Place: </strong>
+  <%= @player.birth_place %>
+</p>
+
+<p>
+  <strong>Position: </strong>
+  <%= @player.position %>
+</p>
