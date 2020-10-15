@@ -6,8 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require "csv" # Import the CSV library that comes with ruby
+require "faker"
 
 # Remove all data to start.
+Mascot.delete_all
 PlayerPosition.delete_all
 Position.delete_all
 Player.delete_all
@@ -68,8 +70,23 @@ players.each do |p|
   end
 end
 
+teams = Team.all
+teams.each do |t|
+  Mascot.create(
+    name: Faker::Name.unique.name,
+    team: t
+  )
+end
+
+# 30.times do
+#   Mascot.create(
+#     name: Faker::Name.unique.name
+#   )
+# end
+
 puts "Created #{Team.count} Teams"
 puts "Created #{College.count} Colleges"
 puts "Created #{Player.count} Players"
 puts "Created #{Position.count} Positions"
 puts "Created #{PlayerPosition.count} Player Positions"
+puts "Created #{Mascot.count} Mascots"
