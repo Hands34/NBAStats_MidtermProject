@@ -1,0 +1,20 @@
+<h1 class="title is-1">About Page</h1>
+<h3 class="title is-3">NBAStats_MidtermProject</h3>
+
+<h4 class="title is-4">Description:</h4>
+<p>
+  I will be using 2 different data sets for this project.
+  One is a set of data describing the individual players stats for the 2014-15 NBA season,
+  and the other will be a list of team mascot names generated using the Faker gem.
+  The NBA stats data set is in the CSV format and I will be using a seed script to populate my tables with the data from the .csv file.
+  I will then create the mascot names using Faker.
+  The tables in my project will include a Player table, a Team table, a College table, a Mascot table, a Position table and also a PlayerPosition table to deal with the many-to-many relationship between players and position.
+  The different relationships in the table include:
+</p>
+<ol class="ml-5">
+  <li>Player-Team = many-to-one</li>
+  <li>Player-College = many-to-one</li>
+  <li>Player-Position = many-to-many</li>
+  <li>Mascot-Team = one-to-one</li>
+</ol>
+
