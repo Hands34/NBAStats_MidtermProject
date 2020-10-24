@@ -1,0 +1,7 @@
+<p class="mb-5">Found <%= pluralize(@players.count, 'Player') %> when searching for: <%= params[:keywords] %></p>
+
+<ul>
+  <% @players.each do |player| %>
+    <li><%= link_to player.full_name, player %></li>
+  <% end %>
+</ul>

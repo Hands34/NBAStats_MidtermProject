@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
-  resources :players, only: %i[index show]
+  resources :players, only: %i[index show] do
+    collection do
+      get "search"
+    end
+  end
+
   resources :teams, only: %i[index show]
 
   root to: "home#index"
