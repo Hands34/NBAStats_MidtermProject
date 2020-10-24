@@ -1,6 +1,6 @@
 class PlayersController < ApplicationController
   def index
-    @players = Player.includes(:team).order("points DESC")
+    @players = Player.includes(:team).order("points DESC") # .page(params[:page])
   end
 
   def show

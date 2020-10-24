@@ -1,4 +1,5 @@
 class Player < ApplicationRecord
+  # paginates_per 5
   belongs_to :college
   belongs_to :team
   has_many :positions

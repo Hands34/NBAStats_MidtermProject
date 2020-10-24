@@ -1,7 +1,13 @@
 <h2 class="title is-2">Top Players</h2>
 
-<ol class="ml-5">
-  <% @players.each do |player|%>
-    <li><%= link_to player.full_name, player %> plays for <%= player.team.name %></li>
-  <% end %>
-</ol>
+<div>
+  <%#<%= paginate(@players) %>
+  <ol class="ml-5">
+    <% @players.each do |player|%>
+      <li><%= link_to player.full_name, player %> plays for <%= player.team.name %>
+
+      </li>
+    <% end %>
+  </ol>
+  <%#<%= paginate(@players)%>
+</div>
